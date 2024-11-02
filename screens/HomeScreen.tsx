@@ -32,10 +32,10 @@ const HomeScreen = ({navigation}) => {
   return (
     <LinearGradient colors={['#808080', '#FFFFFF']} style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerText}>VIP Pass</Text>
+        <Text style={styles.headerText}>VIP Home</Text>
       </View>
 
-      {loading ? (
+      {false ? (
         <View
           style={{
             alignItems: 'center',

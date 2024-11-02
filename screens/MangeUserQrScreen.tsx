@@ -59,7 +59,7 @@ const MangeUserQrScreen = ({navigation, route}) => {
         topContent={
           <TouchableOpacity
             style={styles.closeButton}
-            onPress={() => navigation.goBack()}>
+            onPress={() => navigation.navigate('Home')}>
             <Text style={styles.closeButtonText}>X</Text>
           </TouchableOpacity>
         }

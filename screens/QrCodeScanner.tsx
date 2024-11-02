@@ -38,7 +38,7 @@ const QrCodeScanner = ({navigation, route, mode}) => {
     <View style={styles.container}>
       <QRCodeScanner
         onRead={handleBarCodeRead}
-        flashMode={RNCamera.Constants.FlashMode.off}
+        flashMode={'off'}
         cameraStyle={styles.cameraStyle}
         topContent={
           <TouchableOpacity

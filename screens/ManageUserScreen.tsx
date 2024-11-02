@@ -14,6 +14,7 @@ import {UserContext} from './UserContext';
 import AddIcon from '../src/assets/Icons/AddIcon';
 import ArrowDown from '../src/assets/Icons/ArrowDown';
 import ArrowUp from '../src/assets/Icons/ArrowUp';
+import ArrowBack from '../src/assets/Icons/ArrowBack';
 
 const ManageUserScreen = ({navigation, route}) => {
   const {users, setUsers} = useContext(UserContext);
@@ -63,7 +64,14 @@ const ManageUserScreen = ({navigation, route}) => {
   return (
     <LinearGradient colors={['#808080', '#FFFFFF']} style={styles.container}>
       <View style={styles.header}>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={{paddingLeft: 12}}>
+          <ArrowBack />
+        </TouchableOpacity>
         <Text style={styles.headerText}>Manage Users</Text>
+        <View />
+        <View />
       </View>
 
       <View style={styles.collapsibleContainer}>
@@ -142,11 +150,12 @@ const ManageUserScreen = ({navigation, route}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
   },
   header: {
-    marginVertical: 20,
-    alignSelf: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 36,
   },
   headerText: {
     fontSize: 25,
@@ -158,6 +167,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     overflow: 'hidden',
     marginBottom: 20,
+    marginHorizontal: 12,
   },
   addButtonContainer: {
     paddingVertical: 15,
